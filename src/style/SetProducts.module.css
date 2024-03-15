@@ -1,0 +1,47 @@
+.pizza {
+
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.pizzaWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.pizzaItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid orange;
+}
+
+.pizzaBtn {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pizzaButton {
+  font-weight: 700;
+  cursor: pointer;
+  color: orangered;
+  border-radius: 20px;
+  background-color: orange;
+  padding: 10px 30px;
+
+  transition: .4s;
+}
+
+.pizzaButton:hover {
+  cursor: pointer;
+  font-weight: 700;
+  color: orange;
+  border-radius: 20px;
+  background-color: rgb(255, 60, 0);
+}

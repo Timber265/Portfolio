@@ -1,0 +1,135 @@
+.main {
+  width: 100%;
+  background-color: rgb(255, 252, 201);
+}
+
+.mainWrapper {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.mainText {
+  position: relative;
+  padding: 40px 100px;
+  border: 10px solid #d35e5e;
+  border-radius: 20px;
+  max-width: 1200px;
+  min-height: 200px;
+  margin: 0 auto 50px;
+}
+
+.mainText::after {
+  content: '';
+  position: absolute;
+  background-image: url(../assets/desc.png);
+  transform: scaleX(-1);
+  background-repeat: no-repeat;
+  top: -30px;
+  right: -30px;
+  width: 200px;
+  height: 200px;
+}
+
+.mainTitle {
+  position: relative;
+}
+
+.mainTitle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 10px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #d35e5e;
+}
+
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 350px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #d35e5e;
+}
+
+.mainTitle h1 {
+  display: inline;
+  font-size: 40px;
+  font-style: italic;
+  filter: drop-shadow(0px 0px 4px #ac9595);
+  color: #d35e5e;
+}
+
+.mainTitle p {
+  font-weight: 500;
+  font-size: 25px;
+  font-style: italic;
+  color: #d35e5e;
+}
+
+.mainDesc p {
+  font-size: 17px;
+  line-height: 1.6rem;
+}
+
+.mainInfo {
+  padding: 20px;
+  width: 100%;
+  height: 392px;
+  background-position: center;
+  object-fit: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/descBc.png);
+}
+.mainInfoWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.mainInfoCard  {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 800px;
+  min-height: 350px;
+  border: 10px solid rgb(255, 252, 201);
+  background-color: rgba(255, 252, 201, .5);
+  border-radius: 20px;
+}
+.mainInfoItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 252, 201);
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  width: 350px;
+  border-radius: 20px;
+}
+.mainInfoItem p {
+  font-size: 23px;
+  color: #fff;
+  -webkit-text-stroke: .5px #333;
+  text-shadow: 1px 1px 5px black;
+}
+.link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 15px 20px;
+  background-color: #d35e5e;
+  border-radius: 20px;
+
+  transition: .3s;
+}
+.link:hover  {
+  background-color: blue;
+  color: #fff;
+}
