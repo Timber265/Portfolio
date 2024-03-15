@@ -7,9 +7,8 @@ import { useSelector, useDispatch } from 'react-redux'
 
 export default function SetProducts({ parametr }) {
   const [mark, setMark] = useState([])
-
   const value = useSelector((state) => state.search.value)
-  console.log(value);
+
   
   useEffect(() => {
     const storedProducts = localStorage.getItem('products')
@@ -28,10 +27,12 @@ export default function SetProducts({ parametr }) {
   }
 
   const { data, error, isLoading } = useGetPizzaApiByNameQuery(parametr)
+  const filteredItems = data && data.filter(item => item.title.includes(value));
+
   return (
     <div className={style.pizza}>
       <div className={style.pizzaWrapper}>
-        {data && data.map((prod) => {
+        {filteredItems && filteredItems.map((prod) => {
           return (
             <div key={prod.id} className={style.pizzaItem}>
               <div>

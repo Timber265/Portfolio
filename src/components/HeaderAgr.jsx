@@ -4,6 +4,7 @@ import style from '../style/HeaderAgr.module.css'
 
 import { setValue } from '../slice/searchSlice';
 import { useDispatch } from 'react-redux'
+import { useEffect, useState } from 'react';
 
 export default function HeaderAgr() {
   const dispatch = useDispatch()
@@ -13,6 +14,15 @@ export default function HeaderAgr() {
     localStorage.removeItem('userData')
     navigate("/")
   }
+
+  let [userData, setUserData] = useState([])
+  useEffect(() => {
+    userData = JSON.parse(localStorage.getItem('userData'))
+    if(!userData) {
+      navigate('/auth')
+    }
+  })
+
   return (
     <form onSubmit={(e) => delDataUser(e)}>
       <header className={style.header}>
